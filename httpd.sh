@@ -7,7 +7,7 @@ httpd::on_trap(){
 }
 
 echo "Running counter"
-source ./counter.sh &	# Running in BG
+./counter.sh &	# Running in BG
 
 echo "Running httpd"
 while true ; do nc -l -p 1906 -e ./response.sh; done
