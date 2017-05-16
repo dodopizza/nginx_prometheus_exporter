@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./functions.sh
+source ./functions.sh; sys__var__unique="httpd"
 source ./functions-sys-var.sh
 source ./functions-threads.sh
 
