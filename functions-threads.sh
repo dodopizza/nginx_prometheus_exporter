@@ -1,7 +1,6 @@
 #!/bin/bash
 
 THREADS__FIFO_FILE=./history
-THREADS__LOGS_FILE=./log
 THREADS__PIDS=()
 THREADS__LAST_PID=0
 
@@ -21,7 +20,7 @@ threads::run_standalone() {
 	{
 		{ # try
 			$@
-		} 2> >(tee $THREADS__LOGS_FILE) || { #catch
+		} 2> >(log) || { #catch
 			echo 'Error 1: Error in thread'
 			exit 2
 		}

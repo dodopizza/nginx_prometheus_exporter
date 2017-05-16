@@ -1,0 +1,178 @@
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:49:52] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:49:52] Starting collector
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:50:11] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:50:11] Starting collector
+[UTC+3][2017-05-16 17:50:11] Starting new log rotation
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:52:18] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:52:18] Starting collector
+[UTC+3][2017-05-16 17:52:18] Starting new log rotation
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:52:53] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:52:53] Starting collector
+[UTC+3][2017-05-16 17:52:53] Starting new log rotation
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:55:40] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:55:51] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:55:51] Starting collector
+[UTC+3][2017-05-16 17:55:51] Starting new log rotation
+[UTC+3][2017-05-16 17:56:48] Starting new log rotation
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:57:40] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:57:40] Starting collector
+[UTC+3][2017-05-16 17:57:40] Starting new log rotation
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:58:22] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:58:22] Starting collector
+[UTC+3][2017-05-16 17:58:22] Starting new log rotation
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:58:37] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:58:37] Starting collector
+[UTC+3][2017-05-16 17:58:37] Starting new log rotation
+[UTC+3][2017-05-16 17:58:55]
+[UTC+3][2017-05-16 17:58:52]
+[UTC+3][2017-05-16 17:58:49]
+[UTC+3][2017-05-16 17:58:46]
+[UTC+3][2017-05-16 17:58:43]
+[UTC+3][2017-05-16 17:58:40]
+[UTC+3][2017-05-16 17:58:37]
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 17:59:52] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 17:59:52] Starting collector
+[UTC+3][2017-05-16 17:59:52] Starting new log rotation
+[UTC+3][2017-05-16 17:59:52] 0
+[UTC+3][2017-05-16 17:59:55] 470
+[UTC+3][2017-05-16 17:59:58] 465
+[UTC+3][2017-05-16 18:00:01] 959
+[UTC+3][2017-05-16 18:00:04] 423
+[UTC+3][2017-05-16 18:00:07] 454
+[UTC+3][2017-05-16 18:00:10] 428
+[UTC+3][2017-05-16 18:00:13] 881
+[UTC+3][2017-05-16 18:00:16] 499
+[UTC+3][2017-05-16 18:00:19] 432
+[UTC+3][2017-05-16 18:00:22] 485
+[UTC+3][2017-05-16 18:00:25] 423
+[UTC+3][2017-05-16 18:00:28] 927
+[UTC+3][2017-05-16 18:00:31] 460
+[UTC+3][2017-05-16 18:00:34] 461
+[UTC+3][2017-05-16 18:00:37] 487
+[UTC+3][2017-05-16 18:00:40] 424
+[UTC+3][2017-05-16 17:59:52]
+
+
+
+
+
+
+
+
+
+
+[UTC+3][2017-05-16 18:01:12] Start logging from user root to /root/nginx_prometheus_exporter/logs/counter-2017-05-16.log
+[UTC+3][2017-05-16 18:01:12] Starting collector
+[UTC+3][2017-05-16 18:01:12] Starting new log rotation
+[UTC+3][2017-05-16 18:01:12] 0
+[UTC+3][2017-05-16 18:01:14] 332
+[UTC+3][2017-05-16 18:01:16] 650
+[UTC+3][2017-05-16 18:01:18] 318
+[UTC+3][2017-05-16 18:01:20] 307
+[UTC+3][2017-05-16 18:01:22] 308
+[UTC+3][2017-05-16 18:01:24] 314
+[UTC+3][2017-05-16 18:01:26] 297
+[UTC+3][2017-05-16 18:01:28] 308
+[UTC+3][2017-05-16 18:01:30] 334
+[UTC+3][2017-05-16 18:01:32] 287
+[UTC+3][2017-05-16 18:01:12]

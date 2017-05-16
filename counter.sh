@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ./functions.sh
 source ./functions-sys-var.sh
 source ./functions-threads.sh
 
@@ -12,24 +13,30 @@ this::on_trap(){
 ####
 
 this::watcher(){
-	sys::var::set cnt 0
+	global cnt 0
 	while :; do
-		sys::var::get cnt    > "/dev/shm/__cnt.metric"
-		sys::var::get cnt5xx > "/dev/shm/__5xx.metric"
+		global cnt    > "/dev/shm/__cnt.metric"
+		global cnt5xx > "/dev/shm/__5xx.metric"
 
-                sys::var::set cnt 0
-		sys::var::set cnt5xx 0
+		log `global cnt`
 
-                sleep 60	# 1 minute agregation
+                global cnt 0
+		global cnt5xx 0
+
+                sleep 2 # 1 minute agregation
         done
 }
 
+log "Starting collector"
 threads::run_standalone this::watcher
 
-tail -n 1 -f /var/log/nginx/mtail.log | while IFS='' read line; do
+while :; do
+	log "Starting new log rotation"
+	tail -n 1 -f /var/log/nginx/mtail.log | while IFS='' read line; do
 
-	nginx_resp_status=$( grep -m 1 -oP '(?<=\<status\>)(\d{3})(?=\<\/status\>)' )
-	[ $nginx_resp_status -ge 500 -a $nginx_resp_status -le 599 ] && sys::var::inc cnt5xx
-	sys::var::inc cnt
+		nginx_resp_status=$( grep -m 1 -oP '(?<=\<status\>)(\d{3})(?=\<\/status\>)' )
+		[ $nginx_resp_status -ge 500 -a $nginx_resp_status -le 599 ] && sys::var::inc cnt5xx
+		sys::var::inc cnt
 
+	done
 done

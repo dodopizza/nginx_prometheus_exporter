@@ -1,33 +1,29 @@
 #!/bin/bash
 
-sys__var__uuid=$(uuidgen)
-sys__var__prefix="/dev/shm/${sys__var__uuid}"
-#echo $sys__var__prefix
+sys__var__unique=$(uuidgen)
+sys__var__prefix="/dev/shm/${sys__var__unique}"
 
-sys::var::set(){
-        local key=$1
-        local val=$2
-	local kvname="${sys__var__prefix}-${key}"
-        echo "${val}" > "${kvname}"
+global(){
+        sys::var $@
 }
 
-sys::var::get(){
-        local key=$1
-	local kvname="${sys__var__prefix}-${key}"
+sys::var(){
+	local fvar="${sys__var__prefix}-${1}"
 
-	if [[ -f $kvname ]]; then
-		cat "${kvname}"
+        if [ ! -z ${2:-} ]; then
+        # set variable
+                echo "${2}" > "${fvar}"
         else
-		echo ""
-	fi
+        # get variable
+        	[ -f $fvar ] && cat "${fvar}" || echo ""
+        fi
 }
 
 sys::var::inc(){
-        local key=$1
-	local kvname="${sys__var__prefix}-${key}"
-	echo $(($(<"${kvname}")+1)) >"${kvname}";
+        local fvar="${sys__var__prefix}-${1}"
+        echo $(($(<"${fvar}")+1)) >"${fvar}";
 }
 
 sys::var::unset(){
-	rm -f "${sys__var__prefix}*"
+        rm -f "${sys__var__prefix}*"
 }
