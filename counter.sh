@@ -23,7 +23,7 @@ this::watcher(){
                 global cnt 0
 		global cnt5xx 0
 
-                sleep 2 # 1 minute agregation
+                sleep 60 # 1 minute agregation
         done
 }
 
