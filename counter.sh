@@ -30,13 +30,10 @@ this::watcher(){
 log "Starting collector"
 threads::run_standalone this::watcher
 
-while :; do
-	log "Starting new log rotation"
-	tail -n 1 -f /var/log/nginx/mtail.log | while IFS='' read line; do
+tail -F /var/log/nginx/mtail.log | while IFS='' read line; do
 
-		nginx_resp_status=$( grep -m 1 -oP '(?<=\<status\>)(\d{3})(?=\<\/status\>)' )
-		[ $nginx_resp_status -ge 500 -a $nginx_resp_status -le 599 ] && sys::var::inc cnt5xx
-		sys::var::inc cnt
+	nginx_resp_status=$( grep -m 1 -oP '(?<=\<status\>)(\d{3})(?=\<\/status\>)' )
+	[ $nginx_resp_status -ge 500 -a $nginx_resp_status -le 599 ] && sys::var::inc cnt5xx
+	sys::var::inc cnt
 
-	done
 done
