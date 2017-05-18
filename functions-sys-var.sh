@@ -12,16 +12,16 @@ sys::var(){
 
         if [ ! -z ${2:-} ]; then
         # set variable
-                echo "${2}" > "${fvar}"
+                echo $2 > $fvar
         else
         # get variable
-        	[ -f $fvar ] && cat "${fvar}" || echo ""
+        	[ -f $fvar ] && echo $(<$fvar) || echo ""
         fi
 }
 
 sys::var::inc(){
         local fvar="${sys__var__prefix}-${1}"
-        echo $(($(<"${fvar}")+1)) >"${fvar}";
+        expr $(<$fvar) + 1 > $fvar
 }
 
 sys::var::unset(){
