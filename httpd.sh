@@ -6,8 +6,16 @@ httpd::on_trap(){
 	echo "Shutting down httpd"
 }
 
-echo "Running counter"
-./counter.sh &	# Running in BG
+for counterscript in ./counters/*.sh
+do
+	{
+		echo "Running counter ${counterscript}"
+		$counterscript &
+	} || {
+		echo "Error in counter"
+		exit 1
+	}
+done
 
 echo "Running httpd"
 while true ; do nc -l -p 1906 -e ./response.sh; done

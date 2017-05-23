@@ -18,7 +18,7 @@ sys::timestamp(){
 
 prometheus::gauge::set nginx_server_timestamp "Nginx server timestamp" `sys::timestamp`
 prometheus::gauge::set nginx_active_connections "Nginx active connections" `nginx::get_active_connections`
-prometheus::gauge::set nginx_server_requests "Nginx requests/minute" `cat "/dev/shm/__cnt.metric"`
-prometheus::gauge::set nginx_server_5xx "Nginx 5xx/minute" `cat "/dev/shm/__5xx.metric"`
+prometheus::gauge::set nginx_server_requests "Nginx requests/minute" `cat "/dev/shm/nginx_total.metric"`
+prometheus::gauge::set nginx_server_5xx "Nginx 5xx/minute" `cat "/dev/shm/nginx_5xx.metric"`
 
 echo -e "${response}"
