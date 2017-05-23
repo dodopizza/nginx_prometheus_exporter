@@ -4,9 +4,10 @@ source ./counters.common.sh
 log=/var/log/nginx/mtail.log
 SECONDS=0
 
+lastp=`get_file_size $log`
 while 
-	lastp=`get_file_size $log`
 	segment=`tail -c +$lastp $log`
+	lastp=`get_file_size $log`
 do
 	if [ $SECONDS -ge 60 ]; then 
 		echo ${metric[nginx_total]}; echo ${metric[nginx_5xx]}
